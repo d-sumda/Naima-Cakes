@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Custom Cake Builder - Step 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e64c73",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211115",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-10 py-3 transition-colors">
+<div class="flex items-center gap-4">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">cake</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Sweet Artistry</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8 px-8">
+<nav class="flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Gallery</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Custom Builder</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Shop</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg size-10 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-900 dark:text-white transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="flex items-center justify-center rounded-lg size-10 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-900 dark:text-white transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Stepper -->
+<div class="w-full max-w-4xl mb-12">
+<div class="flex items-center justify-between relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-slate-200 dark:bg-slate-800 -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-2 bg-background-light dark:bg-background-dark px-2 z-10">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-lg ring-4 ring-background-light dark:ring-background-dark">
+                        1
+                    </div>
+<span class="text-sm font-bold text-primary">Size &amp; Shape</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-2 bg-background-light dark:bg-background-dark px-2 z-10">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 font-medium ring-4 ring-background-light dark:ring-background-dark">
+                        2
+                    </div>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Flavors</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-2 bg-background-light dark:bg-background-dark px-2 z-10">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 font-medium ring-4 ring-background-light dark:ring-background-dark">
+                        3
+                    </div>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Design</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 lg:gap-16 w-full max-w-6xl">
+<!-- Left Column: Configuration -->
+<div class="flex-1 flex flex-col gap-10">
+<!-- Header Text -->
+<div>
+<h1 class="text-3xl font-bold mb-2">The Foundation</h1>
+<p class="text-slate-600 dark:text-slate-400">Let's start by choosing the occasion and dimensions for your perfect cake.</p>
+</div>
+<!-- Section: Occasion -->
+<section>
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">celebration</span>
+                        Select Occasion
+                    </h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+<label class="cursor-pointer group">
+<input checked="" class="peer sr-only" name="occasion" type="radio"/>
+<div class="h-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:border-primary/50 transition-all flex flex-col items-center justify-center text-center gap-2">
+<span class="material-symbols-outlined text-2xl mb-1">cake</span>
+<span class="text-sm font-medium">Birthday</span>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="occasion" type="radio"/>
+<div class="h-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:border-primary/50 transition-all flex flex-col items-center justify-center text-center gap-2">
+<span class="material-symbols-outlined text-2xl mb-1">favorite</span>
+<span class="text-sm font-medium">Wedding</span>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="occasion" type="radio"/>
+<div class="h-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:border-primary/50 transition-all flex flex-col items-center justify-center text-center gap-2">
+<span class="material-symbols-outlined text-2xl mb-1">school</span>
+<span class="text-sm font-medium">Graduation</span>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="occasion" type="radio"/>
+<div class="h-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:border-primary/50 transition-all flex flex-col items-center justify-center text-center gap-2">
+<span class="material-symbols-outlined text-2xl mb-1">child_care</span>
+<span class="text-sm font-medium">Baby Shower</span>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="occasion" type="radio"/>
+<div class="h-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:border-primary/50 transition-all flex flex-col items-center justify-center text-center gap-2">
+<span class="material-symbols-outlined text-2xl mb-1">stars</span>
+<span class="text-sm font-medium">Anniversary</span>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="occasion" type="radio"/>
+<div class="h-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary hover:border-primary/50 transition-all flex flex-col items-center justify-center text-center gap-2">
+<span class="material-symbols-outlined text-2xl mb-1">more_horiz</span>
+<span class="text-sm font-medium">Other</span>
+</div>
+</label>
+</div>
+</section>
+<div class="w-full h-px bg-slate-200 dark:bg-slate-800"></div>
+<!-- Section: Shape -->
+<section>
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">category</span>
+                        Choose Shape
+                    </h3>
+<div class="flex flex-wrap gap-4">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="shape" type="radio"/>
+<div class="w-32 h-32 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 flex flex-col items-center justify-center gap-3 transition-all hover:border-primary/50">
+<div class="w-12 h-12 rounded-full border-2 border-current text-slate-400 peer-checked:text-primary"></div>
+<span class="text-sm font-medium peer-checked:text-primary">Round</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="shape" type="radio"/>
+<div class="w-32 h-32 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 flex flex-col items-center justify-center gap-3 transition-all hover:border-primary/50">
+<div class="w-12 h-12 border-2 border-current text-slate-400 peer-checked:text-primary"></div>
+<span class="text-sm font-medium peer-checked:text-primary">Square</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="shape" type="radio"/>
+<div class="w-32 h-32 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 peer-checked:border-primary peer-checked:bg-primary/5 flex flex-col items-center justify-center gap-3 transition-all hover:border-primary/50">
+<div class="w-12 h-10 border-2 border-current text-slate-400 peer-checked:text-primary rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</div>
+<span class="text-sm font-medium peer-checked:text-primary">Heart</span>
+</div>
+</label>
+</div>
+</section>
+<div class="w-full h-px bg-slate-200 dark:bg-slate-800"></div>
+<!-- Section: Size -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">straighten</span>
+                            Select Size
+                        </h3>
+<button class="text-primary text-sm font-medium hover:underline">Size Guide</button>
+</div>
+<div class="space-y-3">
+<label class="relative flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 cursor-pointer hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="peer sr-only" name="size" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-bold text-slate-900 dark:text-white">6 inch (Small)</span>
+<span class="font-medium text-slate-900 dark:text-white">$45.00</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Serves 8-10 people. Perfect for intimate gatherings.</p>
+</div>
+<div class="ml-4 w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary text-white">
+<span class="material-symbols-outlined text-[14px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 cursor-pointer hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input checked="" class="peer sr-only" name="size" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-bold text-slate-900 dark:text-white">8 inch (Medium)</span>
+<span class="font-medium text-slate-900 dark:text-white">$65.00</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Serves 15-20 people. Our most popular size for parties.</p>
+</div>
+<div class="ml-4 w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary text-white">
+<span class="material-symbols-outlined text-[14px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 cursor-pointer hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="peer sr-only" name="size" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-bold text-slate-900 dark:text-white">10 inch (Large)</span>
+<span class="font-medium text-slate-900 dark:text-white">$90.00</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Serves 25-30 people. Great for bigger events.</p>
+</div>
+<div class="ml-4 w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary text-white">
+<span class="material-symbols-outlined text-[14px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 cursor-pointer hover:border-primary/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="peer sr-only" name="size" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-bold text-slate-900 dark:text-white">2 Tier (Custom)</span>
+<span class="font-medium text-slate-900 dark:text-white">From $140.00</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Serves 40+ people. A showstopper for weddings and big celebrations.</p>
+</div>
+<div class="ml-4 w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary text-white">
+<span class="material-symbols-outlined text-[14px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Section: Note -->
+<div class="bg-primary/5 border border-primary/20 p-4 rounded-lg flex gap-3 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary shrink-0">info</span>
+<p>Prices are estimates. Final price may vary based on complex customizations in later steps. Allergens can be specified at checkout.</p>
+</div>
+</div>
+<!-- Right Column: Summary Sticky -->
+<div class="lg:w-[380px] shrink-0">
+<div class="sticky top-24 space-y-4">
+<div class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+<h3 class="text-xl font-bold mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">Your Creation</h3>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-medium text-slate-900 dark:text-white">Base Cake</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">8 inch Round • Birthday</p>
+</div>
+<span class="font-medium">$65.00</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-medium text-slate-900 dark:text-white">Shape Fee</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Standard Round</p>
+</div>
+<span class="font-medium text-slate-500 dark:text-slate-400">$0.00</span>
+</div>
+<!-- Placeholder for next steps -->
+<div class="flex justify-between items-start text-slate-400">
+<div>
+<p class="font-medium">Flavor &amp; Fillings</p>
+<p class="text-sm">Pending selection...</p>
+</div>
+<span>-</span>
+</div>
+</div>
+<div class="border-t border-slate-100 dark:border-slate-800 pt-4 mb-6">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-1">Total Estimate</p>
+<p class="text-3xl font-bold text-primary">$65.00</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 group">
+                            Next: Flavors
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Help Card -->
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<p class="font-bold text-sm text-slate-900 dark:text-white">Need help deciding?</p>
+<a class="text-xs text-primary font-medium hover:underline" href="#">Chat with a cake specialist</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Image at bottom of left column area context -->
+<div class="w-full max-w-6xl mt-16 mb-8 rounded-2xl overflow-hidden h-64 relative bg-slate-100 dark:bg-slate-800">
+<img alt="Elegant pink frosted cake with floral decorations on a stand" class="w-full h-full object-cover opacity-80" data-alt="Elegant pink frosted cake with floral decorations on a stand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfY7teyHCqNR_LM-t8banFuY52AqvfVGgjKrkci-bEU0xrfOBR6NHkSBL-b4C6LmemC-a9ryq0Us6OGsveYSTMO38wjI7O_Gv9xGWC9xW4eyy-r9SimtjJFlDVmFAEcak-zpGjyJWuQ_RdGAOzNPfsnORqlNahfmEDTtHBequpfHPjATzwaQoqgL3leu3FRXB9UwDFtFe3Bh-SHNzJlo8bqoH3QprURi0wCqwDrZKltPTAjmDNCZiPWhKMqhbOpXPIbWoET-wMVn0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex flex-col justify-end p-8">
+<h2 class="text-white text-2xl font-bold">Unsure about size?</h2>
+<p class="text-white/90 max-w-lg mt-2">Check our detailed serving guide with visual examples to ensure everyone gets a slice of happiness.</p>
+<button class="mt-4 w-fit px-4 py-2 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-lg text-sm font-bold transition-colors">
+                     Open Visual Size Guide
+                 </button>
+</div>
+</div>
+</main>
+</body></html>

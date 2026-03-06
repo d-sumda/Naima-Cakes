@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Custom Cake Builder - Flavors &amp; Design</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e64c73",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211115",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-slate-200 dark:border-slate-800 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">cake</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight text-slate-900 dark:text-slate-100">Sweet Crumb</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-slate-900 dark:text-slate-100 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">Home</a>
+<a class="text-primary font-bold text-sm leading-normal" href="#">Custom Builder</a>
+<a class="text-slate-900 dark:text-slate-100 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">Shop</a>
+<a class="text-slate-900 dark:text-slate-100 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">Gallery</a>
+<a class="text-slate-900 dark:text-slate-100 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-[20px] mr-2">shopping_cart</span>
+<span>Cart (0)</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+                    Sign In
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full max-w-[1400px] mx-auto px-4 md:px-10 py-8">
+<!-- Breadcrumbs & Title -->
+<div class="flex flex-col gap-6 mb-8">
+<div class="flex flex-wrap items-center gap-2 text-sm">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Home</a>
+<span class="text-slate-300 dark:text-slate-600">/</span>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Custom Builder</a>
+<span class="text-slate-300 dark:text-slate-600">/</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">Flavors &amp; Design</span>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Build Your Dream Cake</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base">Step 2 of 4: Choose your flavors and aesthetic details.</p>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full max-w-xl flex flex-col gap-2">
+<div class="flex justify-between text-sm font-medium">
+<span class="text-slate-900 dark:text-slate-100">Builder Progress</span>
+<span class="text-primary">50%</span>
+</div>
+<div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 50%;"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 xl:gap-12 relative">
+<!-- Left Column: Options -->
+<div class="flex-1 flex flex-col gap-10">
+<!-- Section: Sponge Flavor -->
+<section>
+<div class="flex items-center gap-3 mb-4">
+<div class="size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">1</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Sponge Flavor</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<!-- Option Card: Active -->
+<label class="group cursor-pointer relative">
+<input checked="" class="peer sr-only" name="sponge" type="radio"/>
+<div class="h-full flex flex-col items-center p-4 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all">
+<div class="size-20 mb-3 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Vanilla bean cake slice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX06P8ok9Tcw8v-wMn0BVuhe_4UYY-AtCfNyHenORrbdjKxnqqW4MrKyd9-wzX-aFxgzvKx2kJCggncSLjU9Xd6M6UDPr6-xtDRd0NZTs8qL0Z09Da-Dx6SR5bXEKgSvcm-eeGoI4AD7Ic9qATf9FV2AVhufZ9rI8O1AfkR-pYt62DUtDgM5Wj5NZ6GhwXx9olBeRaV2BglkMGW8mDt66wx6nW_WA39XXRquIbt0CqAfZy4lUdisiDJJTMXArZKMl5xmOUxDniTw0"/>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 text-center">Vanilla Bean</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 text-center">Classic &amp; Airy</p>
+<div class="absolute top-3 right-3 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</div>
+</label>
+<!-- Option Card: Default -->
+<label class="group cursor-pointer relative">
+<input class="peer sr-only" name="sponge" type="radio"/>
+<div class="h-full flex flex-col items-center p-4 rounded-xl border-2 border-transparent bg-white dark:bg-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-700/50 shadow-sm transition-all peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10">
+<div class="size-20 mb-3 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Rich dark chocolate cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRLQqdWu8zZidLDxQ6JiNy_nvpHww0r7SYA9_3dgaHm2CXeg7u-cNd2Gd-cTmMRoTGZdHw7OmjiArelXikXduDNnWksb4XmnwnDX2vuNAjstOTlMr8fxVLoo6yEeDgFuY_BCSXsaCssO0FSGcVSE7tn9yFpbM00OoGLRTZgbyN7fTDlcJzmF_Hru-fUJ-QOAgjhCP4CJukBEM50imurmWERKt53uYZpRUeeXjssaGDJSSU2XEXk83l3cKRVBh5oC3qZia921gyjU8"/>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 text-center">Dark Chocolate</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 text-center">Rich &amp; Decadent</p>
+<div class="absolute top-3 right-3 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</div>
+</label>
+<!-- Option Card: Default -->
+<label class="group cursor-pointer relative">
+<input class="peer sr-only" name="sponge" type="radio"/>
+<div class="h-full flex flex-col items-center p-4 rounded-xl border-2 border-transparent bg-white dark:bg-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-700/50 shadow-sm transition-all peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10">
+<div class="size-20 mb-3 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Red velvet cake texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8qM5o-0k4QNJEbXcDmlOb5Hcs1AichrvRGD8DzEHWkDKe2GWfuT81zR2QfFWoYfmR2B0051i4w_MN0syIlShIx-XGsT7Be2FYP28AEvh7tWryUuPhes33yDVHfH75KXLcE-DHfCFK4CT6MKZIXzoimRyWQFgOkw7ODtuaxG1eaH8BG_Wvmzfb9ZktCCR_XLtmJsOY_mb4di6fc42uPafQVq98Viw2YFw0yXUK9-Gg0xY7XChu96zLQEaDLH8zWm4V26QkSKLU0qE"/>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 text-center">Red Velvet</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 text-center">Smooth Cocoa</p>
+<div class="absolute top-3 right-3 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</div>
+</label>
+<!-- Option Card: Default -->
+<label class="group cursor-pointer relative">
+<input class="peer sr-only" name="sponge" type="radio"/>
+<div class="h-full flex flex-col items-center p-4 rounded-xl border-2 border-transparent bg-white dark:bg-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-700/50 shadow-sm transition-all peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10">
+<div class="size-20 mb-3 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Lemon zest cake texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACfOeoX_Cj3f4tB9JdEEXmtXj8FGUwpjZ8Lj33ni33RdjqNoPt-d8x0Fup8gtbs0IUmsu1WkVOftLmOPE6HwpLxlaJ_69GkeJQHmrrC0kjj4dL3N9iOQb8_nBw3LesNow-3G7WCboKHJPa3Bfc23Qsc78TakwU2hahoq-aMAN7p406C1_MPyOIJQxB4dAptLq6xR1GjEY3fbCmTDpZmjyyKZ8qwTfsgsy_NCSBcOsNMNzE9BQgLndA-4hl9k84wOMUss5Qmrj2JcY"/>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 text-center">Lemon Zest</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 text-center">Bright &amp; Citrusy</p>
+<div class="absolute top-3 right-3 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</div>
+</label>
+<!-- Option Card: Default -->
+<label class="group cursor-pointer relative">
+<input class="peer sr-only" name="sponge" type="radio"/>
+<div class="h-full flex flex-col items-center p-4 rounded-xl border-2 border-transparent bg-white dark:bg-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-700/50 shadow-sm transition-all peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10">
+<div class="size-20 mb-3 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Carrot cake texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaDkfrCGXSFfkIoSa5eghUk6GEFLCgIb7Hes7TptEQXzq0mH0_8dxDehPW3bdFV87HGdyyl4YztgiWrtwln4dvdqY0kRuTa4ht0K5LJeO_mlh2i0rNz0HnmsyJS0Q5xK-LyQyLPw41FIOiXOgjJAIf1e-P4ErGOdK5Q1lkjOQgTCDmG12Zex4g1gfN_zvwzI0DbDl1RiXK5RLbvAVdaS3W_qnpvMhMiqlZjDqz5S0-BZLm0BUXa6WvTDi0bB1EZ_R2O_8s4b9AV7Q"/>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 text-center">Spiced Carrot</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 text-center">Nutty &amp; Moist</p>
+<div class="absolute top-3 right-3 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</div>
+</label>
+<!-- Option Card: Default -->
+<label class="group cursor-pointer relative">
+<input class="peer sr-only" name="sponge" type="radio"/>
+<div class="h-full flex flex-col items-center p-4 rounded-xl border-2 border-transparent bg-white dark:bg-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-700/50 shadow-sm transition-all peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10">
+<div class="size-20 mb-3 rounded-full overflow-hidden shadow-md bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-slate-400">add</span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 text-center">Custom?</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 text-center">Contact Us</p>
+<div class="absolute top-3 right-3 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</div>
+</label>
+</div>
+</section>
+<!-- Section: Filling & Frosting -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Filling -->
+<section>
+<div class="flex items-center gap-3 mb-4">
+<div class="size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">2</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Filling</h2>
+</div>
+<div class="flex flex-col gap-3">
+<label class="flex items-center p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary cursor-pointer bg-white dark:bg-slate-800 transition-colors">
+<input checked="" class="text-primary focus:ring-primary size-5" name="filling" type="radio"/>
+<span class="ml-3 font-medium text-slate-900 dark:text-slate-100">Vanilla Buttercream</span>
+<span class="ml-auto text-sm text-slate-500">Included</span>
+</label>
+<label class="flex items-center p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary cursor-pointer bg-white dark:bg-slate-800 transition-colors">
+<input class="text-primary focus:ring-primary size-5" name="filling" type="radio"/>
+<span class="ml-3 font-medium text-slate-900 dark:text-slate-100">Strawberry Jam</span>
+<span class="ml-auto text-sm text-primary">+$5.00</span>
+</label>
+<label class="flex items-center p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary cursor-pointer bg-white dark:bg-slate-800 transition-colors">
+<input class="text-primary focus:ring-primary size-5" name="filling" type="radio"/>
+<span class="ml-3 font-medium text-slate-900 dark:text-slate-100">Salted Caramel</span>
+<span class="ml-auto text-sm text-primary">+$8.00</span>
+</label>
+<label class="flex items-center p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary cursor-pointer bg-white dark:bg-slate-800 transition-colors">
+<input class="text-primary focus:ring-primary size-5" name="filling" type="radio"/>
+<span class="ml-3 font-medium text-slate-900 dark:text-slate-100">Dark Chocolate Ganache</span>
+<span class="ml-auto text-sm text-primary">+$10.00</span>
+</label>
+</div>
+</section>
+<!-- Frosting -->
+<section>
+<div class="flex items-center gap-3 mb-4">
+<div class="size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">3</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Outer Frosting</h2>
+</div>
+<div class="flex flex-col gap-3">
+<label class="flex items-center p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary cursor-pointer bg-white dark:bg-slate-800 transition-colors">
+<input checked="" class="text-primary focus:ring-primary size-5" name="frosting" type="radio"/>
+<span class="ml-3 font-medium text-slate-900 dark:text-slate-100">Swiss Meringue</span>
+<span class="ml-auto text-sm text-slate-500">Included</span>
+</label>
+<label class="flex items-center p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary cursor-pointer bg-white dark:bg-slate-800 transition-colors">
+<input class="text-primary focus:ring-primary size-5" name="frosting" type="radio"/>
+<span class="ml-3 font-medium text-slate-900 dark:text-slate-100">American Buttercream</span>
+<span class="ml-auto text-sm text-slate-500">Included</span>
+</label>
+<label class="flex items-center p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary cursor-pointer bg-white dark:bg-slate-800 transition-colors">
+<input class="text-primary focus:ring-primary size-5" name="frosting" type="radio"/>
+<span class="ml-3 font-medium text-slate-900 dark:text-slate-100">Cream Cheese</span>
+<span class="ml-auto text-sm text-primary">+$5.00</span>
+</label>
+<label class="flex items-center p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary cursor-pointer bg-white dark:bg-slate-800 transition-colors">
+<input class="text-primary focus:ring-primary size-5" name="frosting" type="radio"/>
+<span class="ml-3 font-medium text-slate-900 dark:text-slate-100">Fondant Finish</span>
+<span class="ml-auto text-sm text-primary">+$25.00</span>
+</label>
+</div>
+</section>
+</div>
+<!-- Section: Design Style -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">4</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Design Aesthetic</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<label class="group cursor-pointer">
+<input class="peer sr-only" name="design" type="radio"/>
+<div class="rounded-xl overflow-hidden border-2 border-transparent peer-checked:border-primary relative aspect-[4/5] transition-all">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist white cake design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe32-jMFlG1YIeAyrL3Zcztfp3tk0BcYweuXadIqGHXH8l7dKMB3IcClqei-GGxfMXaAles3VKk0Ymlu37Zhhh4valmcfYC0Cj0ASS4z9O4V781aH53CQT662xeoB0nFDEIssXewWATnoS_7McoOeY8NGo1higCxuP25Ztx1_fi9jTqKNgtvRlZnxop3BePya-ObN-pEgqtnIsgTox0ye6zLPRJIGsnJLgBfX72U1Ip55FMJLaFyr36ldaVIPuVAgGBt9jtTKSLRg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+<span class="text-white font-bold">Minimalist</span>
+<span class="text-white/80 text-xs">Clean lines</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+</label>
+<label class="group cursor-pointer">
+<input checked="" class="peer sr-only" name="design" type="radio"/>
+<div class="rounded-xl overflow-hidden border-2 border-transparent peer-checked:border-primary relative aspect-[4/5] transition-all ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Floral cake decoration with pink flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFX1C07nV0VvDmYC-k8xvbxURAUISZEonpkfJS6lqRKBs3Y8d-rpJpnFyyGTpi8Azc-ljC1zgwfH5b3OPFQU4zr5i42t5BLDYFoiF7rXmRqOP8MsKakJnIOPFuT1RoUQ5dxIGjDzGLKQKAj4KTBp5pbP5hSMdOHmiBYHegAY67gi-j_sl63AKGXSNai2e2ysQyCAsEEzrwtEUxAJnr35-5oNgdXZxkUAJPsyoKJeEnnVIq0bw-aAK68zpcCY9gAj9mBFbPX5soJP0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+<span class="text-white font-bold">Floral Fantasy</span>
+<span class="text-white/80 text-xs">Fresh blooms</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+</label>
+<label class="group cursor-pointer">
+<input class="peer sr-only" name="design" type="radio"/>
+<div class="rounded-xl overflow-hidden border-2 border-transparent peer-checked:border-primary relative aspect-[4/5] transition-all">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Drip cake with chocolate drizzle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhwWaT490PVHgvYrJ8_1P8SR3UamCvbyKXa5sag_FocTK3v4s9gVnEOK9FdTKRqrunG7b1A3sdNtsxdeFEypcVhyUgtUGt2OIaDFnOe2cg7-GxFUNveW86cLYnPm3XaA3g4g_wNb5KAhVCiZwh6bIGIJ8mawcWEoChc5AwYnWNpqVNTtqwTWj9zTw9Rrs1EUzzhpGQEk9iVn6mCm4JU4X2Xrry_39ABj6OQFlSPvTEHpodgC8fB9EEZypkPmj1s7valJwF1yz1toc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+<span class="text-white font-bold">Classic Drip</span>
+<span class="text-white/80 text-xs">Elegant drips</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+</label>
+<label class="group cursor-pointer">
+<input class="peer sr-only" name="design" type="radio"/>
+<div class="rounded-xl overflow-hidden border-2 border-transparent peer-checked:border-primary relative aspect-[4/5] transition-all">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Textured vintage cake piping" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo3gbGd1Zz8xDXWk7_0HWr9-RgQHD602SvbH-qb1R9pYgRgRuZ5wTXoCWu3exrKPuSEd3pkwQ1_s1I5YUJI1NmUMBauGtxGOWlo-KNJ9n73CWIX_wdhb3wHyWA6yCYxAR0SxZfWCbCQPcAp8gX8WWI-jFMpNOYgBdOCifSDXTRNUm1X3A7aUTfHYPGK0dV_utkm2RAQjlBdq2QhqXzqqhO4cYOELWQoD5s63MKloxKUUI9Ch-7l4m6WxyqPC_tAZ_xmjGuMgRA0UI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+<span class="text-white font-bold">Vintage Piping</span>
+<span class="text-white/80 text-xs">Retro style</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+</label>
+</div>
+</section>
+<!-- Section: Color Theme -->
+<section>
+<div class="flex items-center gap-3 mb-4">
+<div class="size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">5</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Primary Color Theme</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 mb-4 text-sm">Select the main color for the frosting or accents.</p>
+<div class="flex flex-wrap gap-4">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="color" type="radio"/>
+<div class="size-12 rounded-full bg-[#f8e8ea] ring-2 ring-offset-2 ring-transparent peer-checked:ring-primary ring-offset-background-light dark:ring-offset-background-dark hover:scale-110 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/50 opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="block text-center text-xs mt-1 text-slate-500">Blush</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="color" type="radio"/>
+<div class="size-12 rounded-full bg-[#e3f2fd] ring-2 ring-offset-2 ring-transparent peer-checked:ring-primary ring-offset-background-light dark:ring-offset-background-dark hover:scale-110 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-400 opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="block text-center text-xs mt-1 text-slate-500">Sky</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="color" type="radio"/>
+<div class="size-12 rounded-full bg-[#f3e5f5] ring-2 ring-offset-2 ring-transparent peer-checked:ring-primary ring-offset-background-light dark:ring-offset-background-dark hover:scale-110 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-purple-400 opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="block text-center text-xs mt-1 text-slate-500">Lilac</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="color" type="radio"/>
+<div class="size-12 rounded-full bg-[#e8f5e9] ring-2 ring-offset-2 ring-transparent peer-checked:ring-primary ring-offset-background-light dark:ring-offset-background-dark hover:scale-110 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-green-400 opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="block text-center text-xs mt-1 text-slate-500">Mint</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="color" type="radio"/>
+<div class="size-12 rounded-full bg-[#fff8e1] ring-2 ring-offset-2 ring-transparent peer-checked:ring-primary ring-offset-background-light dark:ring-offset-background-dark hover:scale-110 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-yellow-400 opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="block text-center text-xs mt-1 text-slate-500">Cream</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="color" type="radio"/>
+<div class="size-12 rounded-full bg-white border border-slate-200 dark:bg-slate-700 dark:border-slate-600 ring-2 ring-offset-2 ring-transparent peer-checked:ring-primary ring-offset-background-light dark:ring-offset-background-dark hover:scale-110 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400 opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="block text-center text-xs mt-1 text-slate-500">White</span>
+</label>
+</div>
+</section>
+</div>
+<!-- Right Column: Sticky Summary -->
+<div class="lg:w-[380px] shrink-0">
+<div class="sticky top-28 flex flex-col gap-4">
+<div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-700 overflow-hidden">
+<div class="p-6 border-b border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800">
+<h3 class="font-bold text-lg text-slate-900 dark:text-slate-100">Your Cake Summary</h3>
+<p class="text-sm text-slate-500">Review your choices so far.</p>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<!-- Summary Item -->
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs text-slate-500 uppercase font-semibold">Base</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">8" Round (Serves 12-16)</p>
+</div>
+<span class="text-slate-900 dark:text-slate-100 font-bold">$65.00</span>
+</div>
+<!-- Summary Item -->
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs text-slate-500 uppercase font-semibold">Flavor</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">Vanilla Bean Sponge</p>
+</div>
+<span class="text-slate-500 text-sm">Included</span>
+</div>
+<!-- Summary Item -->
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs text-slate-500 uppercase font-semibold">Filling</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">Strawberry Jam</p>
+</div>
+<span class="text-slate-900 dark:text-slate-100 font-bold text-sm">+$5.00</span>
+</div>
+<!-- Summary Item -->
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs text-slate-500 uppercase font-semibold">Design</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">Floral Fantasy</p>
+</div>
+<span class="text-slate-500 text-sm">Included</span>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-2"></div>
+<div class="flex justify-between items-end">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100">Total</span>
+<span class="text-2xl font-black text-primary">$70.00</span>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700">
+<button class="w-full flex items-center justify-center rounded-lg h-12 bg-primary text-white text-base font-bold shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                Continue to Toppings
+                                <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+<button class="w-full mt-3 text-sm text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 underline">Save for later</button>
+</div>
+</div>
+<!-- Need Help? -->
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-4 flex items-start gap-3 border border-primary/10">
+<span class="material-symbols-outlined text-primary mt-0.5">support_agent</span>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Need design help?</p>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Our bakers are online to answer your questions.</p>
+<a class="text-xs font-bold text-primary mt-2 inline-block hover:underline" href="#">Chat with us</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 pt-16 pb-8">
+<div class="max-w-[1400px] mx-auto px-10">
+<div class="flex flex-col md:flex-row justify-between gap-10 mb-12">
+<div class="max-w-xs">
+<div class="flex items-center gap-2 mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">cake</span>
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">Sweet Crumb</span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Crafting memories one slice at a time. Custom cakes for every occasion, baked with love and the finest ingredients.</p>
+</div>
+<div class="flex gap-12 flex-wrap">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-4">Shop</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Wedding Cakes</a></li>
+<li><a class="hover:text-primary" href="#">Birthday Cakes</a></li>
+<li><a class="hover:text-primary" href="#">Cupcakes</a></li>
+<li><a class="hover:text-primary" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-4">Company</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-4">Support</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">FAQ</a></li>
+<li><a class="hover:text-primary" href="#">Shipping</a></li>
+<li><a class="hover:text-primary" href="#">Returns</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-100 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+<p>© 2024 Sweet Crumb Bakery. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="hover:text-slate-600" href="#">Privacy Policy</a>
+<a class="hover:text-slate-600" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
