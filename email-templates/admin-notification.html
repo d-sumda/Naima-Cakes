@@ -1,0 +1,135 @@
+<div style="
+    font-family: system-ui, sans-serif, Arial;
+    font-size: 14px;
+    color: #4a4a4a;
+    padding: 14px 8px;
+    background-color: #fcfcfc;
+  ">
+    <div style="max-width: 600px; margin: auto; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.02)">
+        <!-- Header -->
+        <div style="border-top: 6px solid #dfafa3; padding: 16px">
+            <span style="
+          text-decoration: none;
+          outline: none;
+          margin-right: 8px;
+          vertical-align: middle;
+          font-family: Georgia, serif;
+          font-size: 22px;
+          color: #dfafa3;
+          font-weight: bold;
+        ">
+                Naima Cakes Alert
+            </span>
+            <span style="
+          font-size: 16px;
+          vertical-align: middle;
+          border-left: 1px solid #dfafa3;
+          padding-left: 8px;
+          color: #3b2f28;
+        ">
+                <strong>New Order Request</strong>
+            </span>
+        </div>
+
+        <!-- Body Content -->
+        <div style="padding: 0 16px;">
+            <p style="font-size: 15px; margin-top: 10px;">Hello,</p>
+            <p style="font-size: 15px; line-height: 1.5; color: #5a5a5a;">You have received a new order inquiry from
+                <strong>{{from_name}}</strong> via the Naima Cakes website.
+            </p>
+
+            <div style="
+          text-align: left;
+          font-size: 14px;
+          padding-bottom: 4px;
+          border-bottom: 2px solid #dfafa3;
+          margin-top: 24px;
+          color: #3b2f28;
+        ">
+                <strong>Order #{{order_id}}</strong>
+            </div>
+
+            <!-- Customer Details -->
+            <div style="
+          text-align: left;
+          font-size: 14px;
+          padding-bottom: 4px;
+          border-bottom: 2px solid #dfafa3;
+          margin-top: 24px;
+          color: #3b2f28;
+        ">
+                <strong>Customer Details</strong>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px;">
+                <tr>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #8a7c75; width: 30%;">
+                        <strong>Name</strong>
+                    </td>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #4a4a4a;">{{from_name}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #8a7c75;"><strong>Email</strong>
+                    </td>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #dfafa3;"><a
+                            href="mailto:{{reply_to}}" style="color: #dfafa3; text-decoration: none;">{{reply_to}}</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #8a7c75;"><strong>Phone</strong>
+                    </td>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #4a4a4a;">{{phone}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #8a7c75;"><strong>Delivery
+                            Address</strong></td>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #4a4a4a;">{{address}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #8a7c75;"><strong>Notes /
+                            Date</strong></td>
+                    <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9; color: #4a4a4a; font-style: italic;">
+                        {{notes}}</td>
+                </tr>
+            </table>
+
+            <!-- Requested Items Header -->
+            <div style="
+          text-align: left;
+          font-size: 14px;
+          padding-bottom: 4px;
+          margin-top: 32px;
+          color: #3b2f28;
+        ">
+                <strong>Requested Items</strong>
+            </div>
+
+            <!-- List Items (Injected HTML Table) -->
+            {{{order_details_html}}}
+
+            <!-- Summary Table -->
+            <table style="border-collapse: collapse; width: 100%; text-align: right; margin-top: 24px;">
+                <tr>
+                    <td style="width: 60%"></td>
+                    <td style="border-top: 2px solid #dfafa3; padding-top: 12px; color: #3b2f28;">
+                        <strong style="white-space: nowrap; font-size: 16px;">Estimated Total</strong>
+                    </td>
+                    <td
+                        style="padding: 12px 8px 0px 8px; border-top: 2px solid #dfafa3; white-space: nowrap; color: #dfafa3; font-size: 18px;">
+                        <strong>{{estimated_total}}</strong>
+                    </td>
+                </tr>
+            </table>
+
+            <div style="margin-bottom: 30px;"></div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="max-width: 600px; margin: auto; padding-top: 16px; text-align: center;">
+        <p style="color: #999; line-height: 1.4; font-size: 12px;">
+            Sent via the Naima Cakes Website Ordering System
+        </p>
+    </div>
+</div>

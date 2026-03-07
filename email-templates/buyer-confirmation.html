@@ -1,0 +1,110 @@
+<div style="
+    font-family: system-ui, sans-serif, Arial;
+    font-size: 14px;
+    color: #4a4a4a;
+    padding: 14px 8px;
+    background-color: #fcfcfc;
+  ">
+    <div style="max-width: 600px; margin: auto; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.02)">
+        <!-- Header -->
+        <div style="border-top: 6px solid #dfafa3; padding: 16px">
+            <!-- You can replace the text below with an actual image logo using src="your-hosted-logo-url" -->
+            <span style="
+          text-decoration: none;
+          outline: none;
+          margin-right: 8px;
+          vertical-align: middle;
+          font-family: Georgia, serif;
+          font-size: 22px;
+          color: #dfafa3;
+          font-weight: bold;
+        ">
+                Naima Cakes
+            </span>
+            <span style="
+          font-size: 16px;
+          vertical-align: middle;
+          border-left: 1px solid #dfafa3;
+          padding-left: 8px;
+          color: #3b2f28;
+        ">
+                <strong>Thank You for Your Inquiry</strong>
+            </span>
+        </div>
+
+        <!-- Body Content -->
+        <div style="padding: 0 16px;">
+            <p style="font-size: 15px; margin-top: 10px;">Hi {{user_name}},</p>
+            <p style="font-size: 15px; line-height: 1.5; color: #5a5a5a;">We've successfully received your order request
+                and are looking at our diary to confirm availability. We will reach out to you within 24-48 hours to
+                confirm the finer details.</p>
+
+            <div style="
+          text-align: left;
+          font-size: 14px;
+          padding-bottom: 4px;
+          border-bottom: 2px solid #dfafa3;
+          margin-top: 24px;
+          color: #3b2f28;
+        ">
+                <strong>Order #{{order_id}}</strong>
+            </div>
+
+            <!-- Requested Items Header -->
+            <div style="
+          text-align: left;
+          font-size: 14px;
+          padding-bottom: 4px;
+          margin-top: 24px;
+          color: #3b2f28;
+        ">
+                <strong>Requested Items</strong>
+            </div>
+
+            <!-- List Items (Injected HTML Table) -->
+            {{{order_details_html}}}
+
+            <!-- Divider -->
+            <div style="padding: 12px 0">
+                <div style="border-top: 1px dashed #dfafa3"></div>
+            </div>
+
+            <!-- Summary Table -->
+            <table style="border-collapse: collapse; width: 100%; text-align: right">
+                <tr>
+                    <td style="width: 60%"></td>
+                    <td style="border-top: 2px solid #dfafa3; padding-top: 12px; color: #3b2f28;">
+                        <strong style="white-space: nowrap; font-size: 16px;">Estimated Total</strong>
+                    </td>
+                    <td
+                        style="padding: 12px 8px 0px 8px; border-top: 2px solid #dfafa3; white-space: nowrap; color: #dfafa3; font-size: 18px;">
+                        <strong>{{estimated_total}}</strong>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Next Steps & Deposit Info -->
+            <div
+                style="background-color: #fbf7f6; padding: 16px; border-radius: 4px; border-left: 4px solid #dfafa3; margin-top: 32px; margin-bottom: 32px; text-align: left;">
+                <p style="margin: 0; font-size: 14px; color: #4a4a4a; line-height: 1.5;">
+                    Once confirmed, a <strong>50% deposit of {{deposit_amount}}</strong> will be required to secure your
+                    booking in our calendar.
+                </p>
+            </div>
+
+            <p
+                style="font-size: 15px; margin-bottom: 30px; font-family: Georgia, serif; font-style: italic; color: #8a7c75;">
+                - The Naima Cakes Team
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="max-width: 600px; margin: auto; padding-top: 16px; text-align: center;">
+        <p style="color: #999; line-height: 1.4; font-size: 12px;">
+            This email was sent to {{user_email}}<br />
+            You received this because you submitted an order request with Naima Cakes.
+        </p>
+    </div>
+</div>
