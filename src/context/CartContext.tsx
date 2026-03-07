@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import type { ReactNode } from 'react';
+import toast from 'react-hot-toast';
 
 export type CartItemType = 'product' | 'custom_cake';
 
@@ -29,6 +30,14 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const [items, setItems] = useState<CartItem[]>([]);
 
     const addToCart = (newItem: CartItem) => {
+        const isExisting = items.some(item => item.id === newItem.id);
+
+        if (isExisting) {
+            toast.success(`Added another ${newItem.title} to order`);
+        } else {
+            toast.success(`Added ${newItem.title} to order`);
+        }
+
         setItems((prevItems) => {
             // For simple products, we might group by ID and options. 
             // For custom cakes (which usually get unique IDs), they won't group unless they have the exact same ID.
