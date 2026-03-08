@@ -3,8 +3,8 @@
 **Rate:** £35.00 / hour
 
 ## 1. Project Architecture & Tooling 
-**Estimated Time:** 3.5 Hours  
-**Subtotal:** £122.50
+**Estimated Time:** 7.0 Hours  
+**Subtotal:** £245.00
 
 *   **Initialization & Setup**: Bootstrapped the application using Vite, React, and TypeScript.
 *   **Routing**: Designed a standard Multi-Page App (MPA) layout with `react-router-dom` incorporating sticky navigation and universal footers.
@@ -12,8 +12,8 @@
 *   **Data Hydration Strategy**: Configured a scalable TypeScript mock-data structure for the cake catalog (`ProductGrid.tsx`) with strongly typed properties for easy backend migration.
 
 ## 2. Generated Features
-**Estimated Time:** 6.0 Hours  
-**Subtotal:** £210.00
+**Estimated Time:** 10.0 Hours  
+**Subtotal:** £350.00
 
 *   **Landing Page**: Programmed the Hero Banner with image carousels, the interactive 'Category Grid', and the 'Why Choose Us' feature section.
 *   **Dynamic Shop Grid**: Migrated the static HTML Store view into a dynamic React catalog with fully interactive Product Cards supporting hover state transformations and shopping cart actions.
@@ -32,8 +32,8 @@
 *   **IDE Linting Fixes**: Cleaned up legacy unexported `lucide-react` icon dependencies left over from the static HTML export.
 
 ## 4. Custom Cake Builder Implementation
-**Estimated Time:** 4.5 Hours  
-**Subtotal:** £157.50
+**Estimated Time:** 9.5 Hours  
+**Subtotal:** £332.50
 
 *   **Multi-Step UI Architecture**: Designed a complex, three-stage wizard allowing users to configure and compile cake sizes, sponge flavors, artistic styling, and custom toppings.
 *   **Persistent State Management**: Implemented reactive data structures to navigate form progression seamlessly and retain all user selections across components.
@@ -48,7 +48,19 @@
 *   **Instagram Embed Widget**: Injected and configured a dynamic Elfsight Instagram feed container into the Home screen and the main document `HEAD` script loader context.
 *   **Marketing Event Links**: Transitioned the Home page hero Call-to-Action button from static content to an active React Router navigation event targeting the new Custom Builder path.
 
+## 6. Email Integration & Checkout Refactor
+**Estimated Time:** 25.0 Hours  
+**Subtotal:** £875.00
+
+*   **Checkout Redesign**: Dismantled the direct payment checkout and implemented a comprehensive order request form capturing customer details, delivery requirements, and dynamic cart logic.
+*   **EmailJS Integration & SMTP Pipeline**: Engineered a dual-email delivery pipeline via EmailJS mapped to Hostinger's custom SMTP, ensuring reliable delivery without backend infrastructure.
+*   **Dynamic HTML Templates**: Designed and configured responsive HTML email templates for Admin Notifications and Buyer Confirmations matching the Naima Cakes branding.
+*   **Order Tracking Infrastructure**: Programmed a randomization algorithm to generate unique, traceable Order IDs attached to every checkout request.
+*   **Rich HTML Order Renderers**: Refactored the email cart payload from plain text into a dynamically generated, structured HTML table for a professional aesthetic.
+*   **Global Notification System**: Installed and configured `react-hot-toast` across the application context, wiring interactive visual confirmations into the global cart state manager.
+*   **Cart Lifecycle Management**: Improved UX by programmatically wiping the user's cart state upon successful verification of the EmailJS transmission roundtrip.
+
 ---
 
-### **Total Estimated Time:** 18.5 Hours
-### **Total Invoice Amount:** £647.50
+### **Total Estimated Time:** 56.0 Hours
+### **Total Invoice Amount:** £1960.00
