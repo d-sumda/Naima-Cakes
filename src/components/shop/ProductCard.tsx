@@ -18,7 +18,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
 
     return (
         <div
-            className="group flex flex-col bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            className="group flex flex-col h-full bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             style={{ transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)' }}
         >
             <Link

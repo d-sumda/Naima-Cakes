@@ -59,8 +59,16 @@
 *   **Rich HTML Order Renderers**: Refactored the email cart payload from plain text into a dynamically generated, structured HTML table for a professional aesthetic.
 *   **Global Notification System**: Installed and configured `react-hot-toast` across the application context, wiring interactive visual confirmations into the global cart state manager.
 *   **Cart Lifecycle Management**: Improved UX by programmatically wiping the user's cart state upon successful verification of the EmailJS transmission roundtrip.
+## 7. UI Polish & Landing Page Revisions
+**Estimated Time:** 5.0 Hours  
+**Subtotal:** £175.00
+
+*   **Hero Section Redesign**: Refactored the landing page hero section from a side-by-side component structure into a full-width background photo layout, implementing custom dark-to-transparent gradient overlays to preserve text readability against complex imagery.
+*   **Typography Adjustments**: Restructured heading line breaks to accommodate brand messaging ("Artisan Cakes for Every Occasion") on a single localized text line, adjusting responsive tailwind container max-widths.
+*   **Product Card Uniformity**: Fixed CSS grid and flexbox properties inside the `ProductCard` components to guarantee uniform, equal height rendering across the Shop grid regardless of description text length.
+*   **Logo Sizing & Asset Updates**: Researched constraints and optimized the global website navigation header to swap in the new Naima Cakes branding logo asset.
 
 ---
 
-### **Total Estimated Time:** 56.0 Hours
-### **Total Invoice Amount:** £1960.00
+### **Total Estimated Time:** 61.0 Hours
+### **Total Invoice Amount:** £2135.00
