@@ -1,6 +1,7 @@
 import { Camera } from 'lucide-react';
 import { HeroSection } from '../components/home/HeroSection';
 import { CategoryGrid } from '../components/home/CategoryGrid';
+import { HowToOrderSection } from '../components/home/HowToOrderSection';
 import { FeaturesSection } from '../components/home/FeaturesSection';
 
 export const Home = () => {
@@ -8,6 +9,7 @@ export const Home = () => {
         <main className="flex-1">
             <HeroSection />
             <CategoryGrid />
+            <HowToOrderSection />
             <FeaturesSection />
             <section className="bg-background-light dark:bg-background-dark py-16 lg:py-24">
                 <div className="mx-auto max-w-7xl px-6 lg:px-10 text-center mb-10">
