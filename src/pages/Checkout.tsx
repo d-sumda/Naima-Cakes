@@ -71,7 +71,7 @@ export const Checkout = () => {
 
         const adminTemplateParams = {
             order_id: orderId,
-            to_name: 'Naima Cakes',
+            to_name: 'Royal Cakes',
             from_name: formData.name,
             reply_to: formData.email,
             phone: formData.phone,

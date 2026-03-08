@@ -14,7 +14,7 @@ export const About = () => {
                                 Baking the world a <span className="text-primary">sweeter place</span>, one slice at a time.
                             </h1>
                             <p className="text-lg text-slate-600 dark:text-slate-400">
-                                What started as a humble kitchen experiment has blossomed into a sanctuary for cake lovers. At Naima Cakes, we believe that every celebration deserves a centerpiece that tastes as miraculous as it looks.
+                                What started as a humble kitchen experiment has blossomed into a sanctuary for cake lovers. At Royal Cakes, we believe that every celebration deserves a centerpiece that tastes as miraculous as it looks.
                             </p>
                         </div>
                         <div className="flex-1">
@@ -165,7 +165,7 @@ export const About = () => {
                                 <Star size={16} fill="currentColor" />
                                 <Star size={16} fill="currentColor" />
                             </div>
-                            <p className="mb-6 text-slate-700 dark:text-slate-300 italic">"Naima Cakes made the ordering process so easy. The custom builder on the site is fun to use, and the final product exceeded my expectations."</p>
+                            <p className="mb-6 text-slate-700 dark:text-slate-300 italic">"Royal Cakes made the ordering process so easy. The custom builder on the site is fun to use, and the final product exceeded my expectations."</p>
                             <div className="flex items-center gap-3">
                                 <div className="size-10 rounded-full bg-slate-200 overflow-hidden">
                                     <img alt="Michael C." className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-aBCCgJhhgghg1a5O_6uJ8CyXJHJucvoyxWjDoVciktuSyGrA6IV0FohMyXjJV7b_RWGWsNBHAALblQJOVrdqfDwOm7SWRDclOx7Q1UojyIEFzjUp2d_IQCGs7H36vaugadfJnvDPexrvx01tNnEm6og_5yLjRXj4JA-k-dDdPD5tiU62nT8wEwDRqwzzG0xBMKA6JCn_zInYLi3qcSKTiJEtjILuGtxlvfw3BSGhBtWdIEXUAViJvC3l5XtHVKkMEtnM_0l6qiY" />

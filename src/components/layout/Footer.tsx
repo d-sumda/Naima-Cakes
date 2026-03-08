@@ -1,7 +1,7 @@
 
 import { Instagram, Facebook, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import NaimaLogo from '../../assets/Naima-Cakes-Logo.svg';
+import RoyalLogo from '../../assets/Royal-Cakes-Logo.svg';
 
 export const Footer = () => {
     return (
@@ -10,7 +10,7 @@ export const Footer = () => {
                 <div className="space-y-4 col-span-1 md:col-span-1">
                     <div className="flex items-center mb-4">
                         <div className="flex w-32 md:w-40 items-center justify-start overflow-hidden">
-                            <img src={NaimaLogo} alt="Naima Cakes Logo" className="w-full h-auto object-contain" />
+                            <img src={RoyalLogo} alt="Royal Cakes Logo" className="w-full h-auto object-contain" />
                         </div>
                     </div>
                     <p className="text-sm text-text-subtle dark:text-gray-400">
@@ -55,7 +55,7 @@ export const Footer = () => {
             </div>
 
             <div className="mx-auto max-w-7xl mt-12 pt-8 border-t border-primary/10 text-center text-sm text-text-subtle dark:text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p>&copy; {new Date().getFullYear()} Naima Cakes. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Royal Cakes. All rights reserved.</p>
                 <div className="flex gap-4">
                     <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
                     <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

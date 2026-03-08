@@ -1,9 +1,9 @@
 
-import { User, ShoppingBag, Menu, X } from 'lucide-react';
+import { ShoppingBag, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import NaimaLogo from '../../assets/Naima-Cakes-Logo.svg';
+import RoyalLogo from '../../assets/Royal-Cakes-Logo.svg';
 import { useCart } from '../../context/CartContext';
 
 export const Header = () => {
@@ -21,9 +21,9 @@ export const Header = () => {
             <div className="mx-auto flex max-w-7xl items-center justify-between">
                 <Link to="/" className="flex items-center gap-3">
                     <div className="flex size-10 items-center justify-center rounded-lg overflow-hidden">
-                        <img src={NaimaLogo} alt="Naima Cakes Logo" className="w-full h-full object-contain" />
+                        <img src={RoyalLogo} alt="Royal Cakes Logo" className="w-full h-full object-contain" />
                     </div>
-                    <h2 className="text-xl font-bold tracking-tight text-text-main dark:text-white font-serif">Naima Cakes</h2>
+                    <h2 className="text-xl font-bold tracking-tight text-text-main dark:text-white font-serif">Royal Cakes</h2>
                 </Link>
 
                 <nav className="hidden lg:flex items-center gap-8">
@@ -40,9 +40,6 @@ export const Header = () => {
                     <Link to="/shop" className="hidden sm:flex h-10 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white transition-all hover:bg-primary-dark shadow-sm hover:shadow-md hover:-translate-y-0.5">
                         Order Now
                     </Link>
-                    <button className="hidden md:flex size-10 items-center justify-center rounded-full border border-primary/20 bg-white dark:bg-surface-dark text-text-main dark:text-white hover:bg-primary/5 transition-colors">
-                        <User size={20} />
-                    </button>
                     <Link to="/checkout" className="flex size-10 items-center justify-center rounded-full border border-primary/20 bg-white dark:bg-surface-dark text-text-main dark:text-white hover:bg-primary/5 transition-colors relative">
                         <ShoppingBag size={20} />
                         {cartItemCount > 0 && (
@@ -73,9 +70,9 @@ export const Header = () => {
                         <div className="flex items-center justify-between mb-8">
                             <Link to="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
                                 <div className="flex size-10 items-center justify-center rounded-lg overflow-hidden">
-                                    <img src={NaimaLogo} alt="Naima Cakes Logo" className="w-full h-full object-contain" />
+                                    <img src={RoyalLogo} alt="Royal Cakes Logo" className="w-full h-full object-contain" />
                                 </div>
-                                <h2 className="text-xl font-bold tracking-tight text-text-main dark:text-white font-serif">Naima Cakes</h2>
+                                <h2 className="text-xl font-bold tracking-tight text-text-main dark:text-white font-serif">Royal Cakes</h2>
                             </Link>
 
                             <button
@@ -102,8 +99,8 @@ export const Header = () => {
                                     to={item.path}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className={`text-2xl font-serif font-bold transition-colors ${location.pathname === item.path
-                                            ? 'text-primary'
-                                            : 'text-text-main dark:text-white hover:text-primary dark:hover:text-primary'
+                                        ? 'text-primary'
+                                        : 'text-text-main dark:text-white hover:text-primary dark:hover:text-primary'
                                         }`}
                                 >
                                     {item.name}
@@ -128,10 +125,6 @@ export const Header = () => {
                                         <ShoppingBag size={20} />
                                         Cart ({cartItemCount})
                                     </Link>
-                                    <button className="flex h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-primary/20 bg-white dark:bg-surface-dark text-text-main dark:text-white font-medium">
-                                        <User size={20} />
-                                        Account
-                                    </button>
                                 </div>
                             </div>
                         </nav>

@@ -27,7 +27,7 @@ export const FeaturesSection = () => {
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Our Promise</span>
                     <h2 className="text-4xl lg:text-5xl font-serif font-bold text-text-main dark:text-white mb-6 leading-tight">
-                        Why Choose Naima Cakes?
+                        Why Choose Royal Cakes?
                     </h2>
                     <p className="text-lg text-text-subtle dark:text-gray-300 leading-relaxed">
                         We don't just bake cakes; we create edible memories. Every crumb is a testament to our passion for perfection and artisan craft.
@@ -58,7 +58,7 @@ export const FeaturesSection = () => {
             </div>
 
             <div className="absolute -bottom-10 right-0 text-[180px] font-serif font-black text-primary/[0.02] select-none pointer-events-none whitespace-nowrap">
-                NAIMA CAKES
+                ROYAL CAKES
             </div>
         </section>
     );

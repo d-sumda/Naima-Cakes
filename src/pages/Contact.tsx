@@ -79,7 +79,7 @@ export const Contact = () => {
                                 </div>
                                 <h4 className="font-bold text-lg mb-1 text-text-main dark:text-white">Email</h4>
                                 <p className="text-text-subtle dark:text-gray-400 text-sm mb-2">Friendly team is here to help.</p>
-                                <a className="text-primary font-semibold hover:underline" href="mailto:hello@naimacakes.com">hello@naimacakes.com</a>
+                                <a className="text-primary font-semibold hover:underline" href="mailto:hello@royalcakes.com">hello@royalcakes.com</a>
                             </div>
                         </div>
 
